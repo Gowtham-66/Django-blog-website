@@ -1,0 +1,44 @@
+{% load static %}
+{% static "media/pics" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>My Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <nav>
+        <ul class="blog-list">
+            {% for collection, dests in dests_by_collection.items %}
+            <li class="collection-item">
+                <h2>{{ collection }}</h2>
+                <ul class="blog-sublist">
+                    {% for dest in dests %}
+                    <li class="blog-item">
+                       
+                        <a href="#" class="blog-link" data-desc="{{ dest.desc }}" data-image-url="{{dest.img.url}}" >{{ dest.topic }}</a>
+
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <main>
+        <div class="blog-content" id="blog-content">
+            <h1>Welcome to My Blog</h1>
+            <!-- Blog post content will be displayed here -->
+        </div>
+        <button id="show-button" style="display: none;">Show Button</button>
+    </main>
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>
+
+

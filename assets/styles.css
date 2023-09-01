@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav {
+    float: left;
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    margin-bottom: 0.5rem;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.blog-link:hover {
+    color: #f2f2f2;
+}
+
+main {
+    float: left;
+    width: 70%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.blog-content {
+    display: none;
+}
+
+/* Add your animation styles here */
